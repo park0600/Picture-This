@@ -16,27 +16,39 @@
       <h4>My Really Cool Blog Post</h4>
     </div>
     <picture>
-      <source srcset="images/museum_s_960.jpg,
+      <source srcset="images/museum_s_800.jpg 800w,
+                      images/museum_s_1600.jpg 1600w,
+                      images/museum_s_2400.jpg 2400w"
+              media="(min-width: 1600px)" />
+              
+      <source srcset="images/museum_s_640.jpg 640w,
                       images/museum_s_1280.jpg 1280w,
                       images/museum_s_1920.jpg 1920w"
+              media="(min-width: 1280px)" />
+
+      <source srcset="images/museum_s_480.jpg 480w,
+                      images/museum_s_960.jpg 960w,
+                      images/museum_s_1440.jpg 1440w"
               media="(min-width: 960px)" />
+
+      <source srcset="images/museum_l_720.jpg 720w,
+                      images/museum_l_1440.jpg 1440w,
+                      images/museum_l_2160.jpg 2160w"
+              media="(min-width: 720px)" />
+
       <source srcset="images/museum_l_480.jpg 480w,
-                      images/museum_l_640.jpg 640w,
-                      images/museum_l_720.jpg 720w"
+                      images/museum_l_960.jpg 960w,
+                      images/museum_l_1440.jpg 1440w"
               media="(min-width: 480px)" />
+
       <source srcset="images/museum_l_320.jpg 320w,
-                      images/museum_l_480.jpg 480w,
-                      images/museum_l_640.jpg 640w"
-              media="(min-width: 320px)" />
-      <source srcset="images/museum_l_320.jpg 320w,
-                      images/museum_l_480.jpg 480w,
                       images/museum_l_640.jpg 640w,
-                      images/museum_l_720.jpg 720w"
-              media="(max-width: 319px)" />
+                      images/museum_l_960.jpg 960w"
+              media="(min-width: 320px)" />
       
       <img class="museum-img"
             src="images/museum_s_960.jpg"
-      alt="Photographs of the interior of the museum">
+            alt="Photographs of the interior of the museum">
     </picture>
   </header>
 </body>
