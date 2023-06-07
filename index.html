@@ -15,21 +15,46 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img
-        srcset="images/museum_land_320.jpg 320w,
-                images/museum_land_480.jpg 480w,
-                images/museum_land_640.jpg 640w,
-                images/museum_land_720.jpg 720w,
-                images/museum_square_480.jpg 960w"
+    <picture>
+      <source srcset="images/museum_square_800.jpg,
+                      images/museum_square_1600.jpg 2x,
+                      images/museum_square_2400.jpg 3x"
+              media="(min-width: 1600px)" />
+              
+      <source srcset="images/museum_square_640.jpg,
+                      images/museum_square_1280.jpg 2x,
+                      images/museum_square_1920.jpg 3x"
+              media="(min-width: 1280px)" />
 
-        sizes="(max-width: 320px) 320w,
-                (max-width: 480px) 480w,        
-                (max-width: 640px) 640w,
-                (max-width: 720px) 720w,
-                (max-width: 960px) 960w"
+      <source srcset="images/museum_square_480.jpg,
+                      images/museum_square_960.jpg 2x,
+                      images/museum_square_1440.jpg 3x"
+              media="(min-width: 960px)" />
 
-        src="images/museum_square_800.jpg"
-        alt="Photographs of the interior of the museum" />
+      <source srcset="images/museum_land_960.jpg,
+                      images/museum_land_1920.jpg 2x,
+                      images/museum_land_2880.jpg 3x"
+              media="(min-width: 720px)" />
+
+      <source srcset="images/museum_land_720.jpg,
+                      images/museum_land_1440.jpg 2x,
+                      images/museum_land_2160.jpg 3x"
+              media="(min-width: 480px)" />
+
+      <source srcset="images/museum_land_480.jpg,
+                      images/museum_land_960.jpg 2x,
+                      images/museum_land_1440.jpg 3x"
+              media="(min-width: 320px)" />
+
+      <source srcset="images/museum_land_320.jpg,
+                      images/museum_land_640.jpg 2x,
+                      images/museum_land_960.jpg 3x"
+              media="(max-width: 319px)" />
+        
+      <img class="museum-img"
+            src="images/museum_square_960.jpg"
+            alt="Photographs of the interior of the museum">
+    </picture>
   </header>
 </body>
 
